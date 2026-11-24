@@ -1,0 +1,86 @@
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; margin: 0; color: #2c3e50; }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-block; padding: 10px 18px; border-radius: 6px; border: none;
+       cursor: pointer; font-size: 15px; text-decoration: none; }
+.btn-primary { background: #2c3e8f; color: #fff; }
+.btn-primary:hover { background: #1f2c6b; }
+.btn-secondary { background: #e4e7ee; color: #2c3e50; }
+.btn-secondary:hover { background: #d0d5e0; }
+
+/* ---------- Form & Error pages ---------- */
+.page-form { background: #eef1f7; padding: 30px 15px; }
+.form-container { max-width: 760px; margin: auto; background: #fff; padding: 30px 35px;
+                  border-radius: 10px; box-shadow: 0 4px 14px rgba(0,0,0,.1); }
+.form-container h1 { margin-top: 0; color: #2c3e8f; }
+.subtitle { color: #667; }
+.req { color: #c0392b; }
+fieldset { border: 1px solid #d5d9e4; border-radius: 8px; margin: 18px 0; padding: 15px 20px; }
+legend { padding: 0 8px; font-weight: 600; color: #2c3e8f; }
+label { display: block; margin: 12px 0 5px; font-weight: 600; font-size: 14px; }
+input[type=text], select, textarea { width: 100%; padding: 9px 10px; border: 1px solid #bcc3d4;
+                  border-radius: 5px; font-size: 14px; font-family: inherit; }
+input:focus, select:focus, textarea:focus { outline: 2px solid #9fb0ee; }
+.row { display: flex; gap: 15px; }
+.row > div { flex: 1; }
+.actions { display: flex; gap: 10px; margin-top: 20px; }
+.sample-box { display: flex; justify-content: space-between; align-items: center;
+              background: #f3f6ff; border: 1px dashed #8fa0e0; padding: 10px 15px;
+              border-radius: 8px; margin: 15px 0; }
+.error-box { border-top: 6px solid #c0392b; }
+.error-box h1 { color: #c0392b; }
+.error-list { background: #fdecea; padding: 15px 15px 15px 35px; border-radius: 6px; color: #922b21; }
+
+/* ---------- Photo upload (form) ---------- */
+.photo-upload { display: flex; align-items: center; gap: 18px; }
+.photo-preview { width: 100px; height: 100px; border-radius: 50%; object-fit: cover;
+                 border: 3px solid #d5d9e4; background: #eef1f7; flex-shrink: 0; }
+.photo-upload input[type=file] { font-size: 14px; }
+.photo-msg { display: block; margin-top: 6px; color: #c0392b; }
+
+/* ---------- CV page ---------- */
+.page-cv { background: #dfe3ec; padding: 20px 10px; }
+.toolbar { max-width: 800px; margin: 0 auto 15px; display: flex;
+           justify-content: space-between; align-items: center; }
+.badge { background: #f39c12; color: #fff; padding: 5px 12px; border-radius: 20px; font-size: 13px; }
+.cv-sheet { max-width: 800px; margin: auto; background: #fff; padding: 45px 55px;
+            box-shadow: 0 4px 14px rgba(0,0,0,.15); }
+
+/* Header: photo on the left, text on the right */
+.cv-header { display: flex; align-items: center; gap: 28px;
+             border-bottom: 3px solid #2c3e8f; padding-bottom: 18px; margin-bottom: 10px; }
+.cv-photo { width: 130px; height: 130px; border-radius: 50%; object-fit: cover;
+            border: 4px solid #2c3e8f; flex-shrink: 0; }
+.cv-header-text { flex: 1; text-align: center; }
+.cv-header h1 { margin: 0; font-size: 34px; letter-spacing: 1px; color: #2c3e8f; }
+.cv-header h2 { margin: 5px 0 10px; font-weight: 400; color: #555; font-size: 18px; }
+.contact span { margin: 0 8px; font-size: 14px; color: #444; display: inline-block; }
+
+.cv-sheet section { margin-top: 22px; }
+.cv-sheet h3 { text-transform: uppercase; letter-spacing: 1.5px; font-size: 15px; color: #2c3e8f;
+               border-bottom: 1px solid #ccd; padding-bottom: 4px; margin-bottom: 10px; }
+.entry-head { display: flex; justify-content: space-between; }
+.date { color: #666; font-style: italic; font-size: 14px; }
+.muted { color: #666; font-size: 14px; }
+.cv-sheet ul { margin: 8px 0 0; padding-left: 22px; }
+.cv-sheet li { margin-bottom: 4px; }
+.skill-label { font-weight: 600; margin: 8px 0 4px; font-size: 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { background: #e8ecfb; color: #2c3e8f; padding: 4px 11px; border-radius: 14px; font-size: 13px; }
+
+/* ---------- Print friendly ---------- */
+@media print {
+    .no-print { display: none !important; }
+    .page-cv { background: #fff; padding: 0; }
+    .cv-sheet { box-shadow: none; padding: 0; max-width: 100%; }
+    .tag { border: 1px solid #999; background: #fff; color: #000; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@media (max-width: 600px) {
+    .row { flex-direction: column; gap: 0; }
+    .cv-sheet { padding: 25px; }
+    .cv-header { flex-direction: column; }
+    .photo-upload { flex-direction: column; align-items: flex-start; }
+}
