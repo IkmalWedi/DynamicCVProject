@@ -54,7 +54,7 @@ public class CVServlet extends HttpServlet {
         // Must be called before reading any parameter
         request.setCharacterEncoding("UTF-8");
 
-        // 1. Read the uploaded photo first (the file is larger than the limit => exception)
+        // 1. Read the uploaded photo first (a file over the limit throws an exception)
         Part photoPart;
         try {
             photoPart = request.getPart("photo");
@@ -135,16 +135,17 @@ public class CVServlet extends HttpServlet {
 
     /**
      * Builds a CVBean pre-populated with realistic dummy data using setters.
+     * All details below are fictional.
      */
     private CVBean createSampleBean() {
         CVBean b = new CVBean();
 
         // Personal info
-        b.setFullName("Aisyah Binti Rahman");
+        b.setFullName("Ahmad Danial Bin Ismail");
         b.setProfessionalTitle("Junior Software Engineer");
-        b.setEmail("aisyah.rahman@example.com");
+        b.setEmail("ahmad.danial@example.com");
         b.setPhone("+60 12-345 6789");
-        b.setProfileUrl("https://www.linkedin.com/in/aisyah-rahman");
+        b.setProfileUrl("https://www.linkedin.com/in/ahmad-danial");
         b.setProfileSummary("Motivated computer science graduate with hands-on experience in "
                 + "building Java EE web applications. Passionate about clean code, "
                 + "MVC architecture and continuous learning.");

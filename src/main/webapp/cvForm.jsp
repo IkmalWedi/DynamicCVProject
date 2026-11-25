@@ -42,7 +42,7 @@
             <small id="photoMsg" class="photo-msg"></small>
 
             <label for="fullName">Full Name <span class="req">*</span></label>
-            <input type="text" id="fullName" name="fullName" placeholder="e.g. Aisyah Binti Rahman">
+            <input type="text" id="fullName" name="fullName" placeholder="e.g. Ahmad Danial Bin Ismail">
 
             <label for="professionalTitle">Professional Title</label>
             <input type="text" id="professionalTitle" name="professionalTitle" placeholder="e.g. Software Engineer">
